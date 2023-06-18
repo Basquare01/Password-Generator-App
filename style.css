@@ -1,0 +1,103 @@
+*{
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: purple;
+
+}
+
+.container{
+    padding: 25px 15px;
+    background-color: goldenrod ;
+    border-radius: 12px;
+    width: 400px;
+}
+
+.title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+#amount{
+    width: 40px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 3px 3px 10px;
+    /* visibility: hidden; */
+}
+
+
+
+#input{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 45px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#gen{
+    /* padding: 5px 10px; */
+    width: 120px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: goldenrod;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#copy{
+    width: 120px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: black;
+    margin-left: 125px;
+    color: goldenrod;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#write{
+    font-size: 14px;
+    font-family: monospace;
+    word-spacing: -3px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+#copy:hover , #gen:hover{
+    background-color: purple;
+    color: black;
+}
+
+
+

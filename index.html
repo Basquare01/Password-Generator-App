@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts-awe/css/all.css">
+
+</head>
+<body>
+    <div class="container">
+         <div class="box-container">
+            <div class="title">
+                Password Generator
+            </div>
+            <div class="btn">
+                <input type="text" id="amount" value="" maxlength="2"/> <span id="write">Input the password length e.g 6 or 8 or 12...</span>
+                <input type="text" id="input" readonly/>
+                <button id="gen">Generate <i class="fa-brands fa-dev"></i></button>
+                <button id="copy">Copy <i class="fa-solid fa-clipboard"></i></button>
+            </div>
+         </div>
+    </div>
+
+    <script>
+        let amount = document.querySelector('#amount')
+        let input = document.querySelector('#input')
+        let btnGen = document.querySelector('#gen')
+        let btnCopy = document.querySelector('#copy')
+
+        btnGen.addEventListener('click', generate);
+
+        function generate(){
+            let val = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890<>?:"@#&';
+            let password = ''; 
+            if(isNaN(amount.value)){
+                amount.value = ''
+                alert('Pls input a Number!');
+            }
+            for(i = 0; i < amount.value; i++){
+            let rand = Math.floor(Math.random() * val.length);
+            password += val.substring(rand, rand +1)
+            }
+            document.querySelector('#input').value = password;
+        }
+
+        btnCopy.addEventListener('click', cop)
+        function cop (){
+            input.select();
+            input.setSelectionRange(0,999);
+            document.execCommand('copy')
+            alert('Password Copied to clipboard')
+            input.value = '' 
+        }
+        
+    </script>
+</body>
+</html>
